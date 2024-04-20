@@ -6,6 +6,7 @@ import LandingPage from "./landing-sec/LandingPage";
 import CustomerSec from "./customer-sec/CustomerSec";
 import OurStorySec from "./ourStory-sec/OurStorySec";
 import aboutImg from "../../assets/about-image.png";
+import Footer from "../../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       </div>
       <Menu />
       <Gallery />
+      <Footer />
     </div>
   );
 }
