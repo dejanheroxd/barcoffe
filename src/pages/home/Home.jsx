@@ -13,10 +13,14 @@ export default function Home() {
     <div>
       <LandingPage />
       <CustomerSec />
-      <div>
+      <div className="md:grid md:grid-cols-3 lg:h-[800px]">
         <About />
-        <div className="h-[300px]">
-          <img src={aboutImg} className="h-full w-full object-cover" alt="" />
+        <div className="h-[300px] lg:h-[800px]">
+          <img
+            src={aboutImg}
+            className="h-full w-full object-cover md:h-[700px] lg:h-[800px]"
+            alt=""
+          />
         </div>
         <OurStorySec />
       </div>

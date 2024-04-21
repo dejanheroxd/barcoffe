@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import MenuCard from "./MenuCard";
+import pattern from "../../../assets/pattern.png";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   const [clickedMenu, setClickedMenu] = useState("breakfast");
 
   return (
-    <div className="flex bg-primary text-white flex-col justify-center items-center">
+    <div
+      id="section3"
+      className="flex flex-col items-center justify-center bg-primary text-white md:pb-20"
+    >
       <div>
-        <p className="text-4xl font-bold pb-10 pt-10">MENU</p>
+        <p className="pb-10 pt-10 text-4xl font-bold">MENU</p>
       </div>
-      <div className="text-center text-xl flex flex-col gap-2 pb-10">
+      <div className="flex flex-col gap-2 pb-10 text-center text-xl 2xl:pb-20">
         <p
           onClick={() => setClickedMenu("breakfast")}
           className={`${
             clickedMenu === "breakfast"
-              ? "border-b border-white text-white/100"
+              ? "border-b border-white text-white/95"
               : "border-b border-transparent"
-          } w-[300px] cursor-pointer text-white/65 hover:text-white/100 duration-100`}
+          } w-[300px] cursor-pointer text-white/65 duration-100 hover:text-white/100`}
         >
           BREAKFAST
         </p>
@@ -24,9 +29,9 @@ export default function Menu() {
           onClick={() => setClickedMenu("drinks")}
           className={`${
             clickedMenu === "drinks"
-              ? "border-b border-white text-white/100"
+              ? "border-b border-white text-white/95"
               : "border-b border-transparent"
-          } w-[300px] cursor-pointer hover:text-white/100 duration-100 text-white/65`}
+          } w-[300px] cursor-pointer text-white/65 duration-100 hover:text-white/100`}
         >
           DRINKS
         </p>
@@ -34,9 +39,9 @@ export default function Menu() {
           onClick={() => setClickedMenu("lunch")}
           className={`${
             clickedMenu === "lunch"
-              ? "border-b border-white text-white/100"
+              ? "border-b border-white text-white/95"
               : "border-b border-transparent"
-          } w-[300px] cursor-pointer hover:text-white/100 duration-100 text-white/65`}
+          } w-[300px] cursor-pointer text-white/65 duration-100 hover:text-white/100`}
         >
           LUNCH
         </p>
@@ -44,6 +49,18 @@ export default function Menu() {
       <div>
         <MenuCard clickedMenu={clickedMenu} />
       </div>
+      <Link to="/contact">
+        <button className="relative mt-20 bg-white">
+          <img
+            src={pattern}
+            className="h-[55px] w-[220px] object-cover  "
+            alt=""
+          />
+          <div className="absolute top-0 flex h-full w-full items-center justify-center text-xl font-bold text-slate-700 duration-300 hover:text-gray-400/70">
+            <p>Book Table</p>
+          </div>
+        </button>
+      </Link>
     </div>
   );
 }

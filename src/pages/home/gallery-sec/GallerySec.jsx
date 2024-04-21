@@ -7,10 +7,10 @@ import table from "../../../assets/table.jpg";
 
 export default function GallerySec() {
   return (
-    <div className="bg-secondary px-5 py-10">
-      <div className="grid-row-3 grid-cols-2 md:grid-cols-3 gap-3 grid">
+    <div id="section4" className="bg-secondary px-5 py-10">
+      <div className="grid-row-3 grid grid-cols-2 gap-3 md:grid-cols-3">
         <img
-          className="col-span-2 md:row-span-2 h-full object-cover"
+          className="col-span-2 h-full object-cover md:row-span-2"
           src={barman}
           alt=""
         />

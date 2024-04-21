@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }

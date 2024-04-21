@@ -3,7 +3,7 @@ import OneMeal from "./OneMeal";
 
 export default function Lunch() {
   return (
-    <>
+    <div className="grid-cols-3 gap-y-10 px-[70px] xl:grid">
       <OneMeal
         name="Baked duck burger"
         description="brioche bun, maple bacon, smoked tomato reslish and fries"
@@ -34,6 +34,6 @@ export default function Lunch() {
         description="potato galette, broccolini, purple cauliflower & shaved baby heirloom beets."
         price="19"
       />
-    </>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import OneMeal from "./OneMeal";
 
 export default function Breakfast() {
   return (
-    <>
+    <div className="grid-cols-3 gap-y-10 px-[70px] xl:grid">
       <OneMeal
         name="French omelette"
         description="fresh herbs, Spanish onion, roasted peppers, spinach & fetta served with brioche"
@@ -34,6 +34,6 @@ export default function Breakfast() {
         description="banana, vanilla yoghurt, pistachio, chestnut flower honey"
         price="14"
       />
-    </>
+    </div>
   );
 }

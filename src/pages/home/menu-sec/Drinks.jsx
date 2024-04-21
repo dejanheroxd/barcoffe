@@ -3,7 +3,7 @@ import OneMeal from "./OneMeal";
 
 export default function Drinks() {
   return (
-    <>
+    <div className="grid-cols-3 gap-y-10 px-[70px] xl:grid">
       <OneMeal
         name="Milkshae"
         description="salted caramel, vanilla bean"
@@ -44,6 +44,6 @@ export default function Drinks() {
         description="This wine has typical Pinotage aromas of black cherries"
         price="12"
       />
-    </>
+    </div>
   );
 }
