@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import MenuCard from "./MenuCard";
 import pattern from "../../../assets/pattern.png";
-import { Link } from "react-router-dom";
+import Contact from "../../contact/Contact";
 
 export default function Menu() {
   const [clickedMenu, setClickedMenu] = useState("breakfast");
+  const [contactAcitve, setContactActive] = useState(false);
 
   return (
     <div
       id="section3"
-      className="flex flex-col items-center justify-center bg-primary text-white md:pb-20"
+      className="flex flex-col items-center justify-center bg-primary pb-20 text-white md:pb-20"
     >
       <div>
         <p className="pb-10 pt-10 text-4xl font-bold">MENU</p>
@@ -49,18 +50,20 @@ export default function Menu() {
       <div>
         <MenuCard clickedMenu={clickedMenu} />
       </div>
-      <Link to="/contact">
-        <button className="relative mt-20 bg-white">
-          <img
-            src={pattern}
-            className="h-[55px] w-[220px] object-cover  "
-            alt=""
-          />
-          <div className="absolute top-0 flex h-full w-full items-center justify-center text-xl font-bold text-slate-700 duration-300 hover:text-gray-400/70">
-            <p>Book Table</p>
-          </div>
-        </button>
-      </Link>
+      <button
+        onClick={() => setContactActive(true)}
+        className="relative mt-20 bg-white"
+      >
+        <img
+          src={pattern}
+          className="h-[55px] w-[220px] object-cover  "
+          alt=""
+        />
+        <div className="absolute top-0 flex h-full w-full items-center justify-center text-xl font-bold text-slate-700 duration-300 hover:text-gray-400/70">
+          <p>Book Table</p>
+        </div>
+      </button>
+      {contactAcitve && <Contact setContactActive={setContactActive} />}
     </div>
   );
 }
