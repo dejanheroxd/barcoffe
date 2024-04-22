@@ -183,7 +183,7 @@ export default function Navbar() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="lg:justufy-center top-0 z-10 flex h-screen w-full origin-top flex-col items-center justify-center bg-primary lg:absolute lg:top-2 lg:h-20 lg:flex-row lg:items-center lg:justify-between lg:bg-transparent lg:pl-10 xl:pl-20 2xl:top-5"
+            className="lg:justufy-center fixed top-0 z-10 flex h-screen w-full origin-top flex-col items-center justify-center bg-primary lg:absolute lg:top-2 lg:h-20 lg:flex-row lg:items-center lg:justify-between lg:bg-transparent lg:pl-10 xl:pl-20 2xl:top-5"
           >
             <ul className="flex flex-col gap-5 text-center text-2xl text-white lg:flex-row 2xl:gap-9">
               <li>
